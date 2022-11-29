@@ -21,19 +21,20 @@ const defaultAccounts = {
 //const program = anchor.workspace.TikTokClone as Program<TikTokClone>
 //let creatorKey = provider.wallet.publicKey
 let creatorKey = pg.wallet.publicKey
-let stateSigner //= pg.wallet.publicKey
-let videoSigner //= pg.wallet.publicKey
+//let stateSigner //= pg.wallet.publicKey
+//let videoSigner //= pg.wallet.publicKey
 
 describe('tiktok-test', () => {
-  it('Setup Platform', async () => {
-      [stateSigner] = await web3.PublicKey
-      .findProgramAddress(
+  const [stateSigner, _] = web3.PublicKey
+      .findProgramAddressSync(
         [
           anchor.utils.bytes.utf8.encode("state")
         ],
         pg.program.programId
       );
-    
+	  
+  it('Setup Platform', async () => {
+          
     await pg.program.methods
       .setupPlatform()
       .accounts({

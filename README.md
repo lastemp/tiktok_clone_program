@@ -4,11 +4,11 @@ This is a tiktok clone developed as a Rust Smart Contract(running on Solana Bloc
 
 Below are some basic features contained in the program;
 
-i. Signing up users
-ii. Video Uploading
-iii. Create comments
-iv. Like videos
-v. Follow one another
+i. Signing up users <br />
+ii. Video Uploading <br />
+iii. Create comments <br />
+iv. Like videos <br />
+v. Follow one another <br />
 
 NB
 
